@@ -24,10 +24,11 @@ const getWeatherData = async (cityValue) => {
         const weatherDescription = weatherData.weather[0].description
         const weatherIcon = weatherData.weather[0].icon
         const weatherDetails = [
-            `${weatherData.main.feels_like}°`,
+            `${Math.floor( weatherData.main.feels_like)}°`,
             `${weatherData.main.humidity}%`,
             `${weatherData.wind.speed}m/s`
         ]
+        document.getElementById('displayCityName').innerText = weatherData.name
         weatherEL.querySelector('.icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${weatherIcon}.png">`
         weatherEL.querySelector('.temperature').innerText = `${weatherTemperature}°C`
         weatherEL.querySelector('.description').innerText = weatherDescription
