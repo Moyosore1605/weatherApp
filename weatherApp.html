@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./weatherApp.css">
+    <title>Weather App</title>
+</head>
+<body class="flex flex-col justify-center items-center pt-[60px]">
+    <h1 class=" font-bold text-3xl pb-[40px]">Weather App</h1>
+    <form class="bg-red w-[50%] flex justify-between mb-5">
+        <input type="text" placeholder="Search for City" id="city-input" class="b-0 p-2 rounded">
+        <input type="submit" value="Get Weather" class="rounded bg-blue-600 p-2 text-white font-medium">
+    </form>
+    <main class="container mt-5 rounded-[13px] flex w-[40%]">
+        <div id="weather-data" class="text-white w-[100%] flex items-center pt-4 pb-5 flex-col justify-center">
+            <div class="icon mb-4">
+                <img src="http://openweathermap.org/img/wn/01d.png" class="w-[60%]">
+            </div>
+            <div class="temperature text-5xl mb-4">22°</div>
+            <div class="description font-bold mb-4">Sunny</div>
+            <div class="details w-[60%]">
+                <div class="flex justify-between">
+                    <span>Feels like</span>
+                    <span>|</span>
+                    <span id="feels">23°C</span>
+                </div>
+                <div class="flex justify-between">
+                    <span >Humidity</span>
+                    <span>|</span>
+                    <span id="humid">40%</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Windspeed</span>
+                    <span>|</span>
+                    <span id="wnds">5m/s</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+<script src="./weatherApp.js"></script>
